@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Portfolio</title>
+    <style>
+        /* ========== GLOBAL STYLES ========== */
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            background:#f4f4f8;
+            color:#222;
+        }
+        a{
+            color:#0b63ce;
+            text-decoration:none;
+        }
+        a:hover{
+            text-decoration:underline;
+        }
+        h1,h2,h3{
+            margin-bottom:0.5rem;
+        }
+        section{
+            padding:40px 10%;
+        }
+
+        /* ========== HEADER / NAV ========== */
+        header{
+            background:#111827;
+            color:#fff;
+            padding:20px 10%;
+        }
+        .main-heading{
+            font-size:2rem;
+        }
+        .tagline{
+            font-size:0.95rem;
+            margin-top:5px;
+        }
+        nav{
+            margin-top:15px;
+        }
+        nav ul{
+            list-style:none;
+            display:flex;
+            flex-wrap:wrap;
+            gap:15px;
+        }
+        nav a{
+            color:#e5e7eb;
+            font-size:0.9rem;
+            font-weight:bold;
+        }
+        nav a:hover{
+            color:#f97316;
+        }
+
+        /* ========== ABOUT ========== */
+        #about{
+            display:flex;
+            flex-wrap:wrap;
+            gap:30px;
+            align-items:center;
+            background:#ffffff;
+        }
+        .about-text{
+            flex:1 1 260px;
+        }
+        .about-photo{
+            flex:0 0 200px;
+            text-align:center;
+        }
+        .about-photo img{
+            border-radius:50%;
+            border:4px solid #f97316;
+            object-fit:cover;
+        }
+        .about-text p{
+            margin:10px 0;
+        }
+
+        /* ========== EDUCATION ========== */
+        #education{
+            background:#eef2ff;
+        }
+        table{
+            width:100%;
+            border-collapse:collapse;
+            margin-top:15px;
+            background:#fff;
+        }
+        th, td{
+            border:1px solid #cbd5f5;
+            padding:8px 10px;
+            text-align:left;
+            font-size:0.9rem;
+        }
+        th{
+            background:#1f2937;
+            color:#fff;
+        }
+        tbody tr:nth-child(even){
+            background:#f9fafb;
+        }
+        .timeline{
+            margin-top:20px;
+            font-size:0.9rem;
+        }
+        .timeline h3{
+            margin-bottom:5px;
+        }
+        .timeline ol{
+            margin-left:20px;
+        }
+
+        /* ========== SKILLS ========== */
+        #skills{
+            background:#ffffff;
+        }
+        #skills ul{
+            list-style:none;
+            margin-top:10px;
+        }
+        #skills li{
+            margin-bottom:6px;
+            padding-left:25px;
+            position:relative;
+        }
+        #skills li::before{
+            content:"✔";
+            position:absolute;
+            left:0;
+            top:0;
+            color:#16a34a;
+            font-weight:bold;
+        }
+
+        /* ========== PROJECTS ========== */
+        #projects{
+            background:#fef3c7;
+        }
+        .project{
+            margin-top:15px;
+            padding:12px 15px;
+            background:#fff;
+            border-radius:8px;
+            border:1px solid #fbbf24;
+        }
+        .project h3{
+            margin-bottom:5px;
+        }
+        .project img{
+            margin-top:10px;
+            max-width:100%;
+            border-radius:6px;
+        }
+
+        /* ========== CONTACT ========== */
+        #contact{
+            background:#ffffff;
+        }
+        .contact-list{
+            margin-top:10px;
+        }
+
+        /* ========== FOOTER ========== */
+        footer{
+            text-align:center;
+            padding:15px 10%;
+            background:#111827;
+            color:#e5e7eb;
+            font-size:0.85rem;
+        }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width:768px){
+            header, section{
+                padding:20px 6%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- MAIN WEBSITE HEADING + HEADER WITH TAGLINE -->
+    <header>
+        <h1 class="main-heading">Harsh – Personal Portfolio</h1>
+        <p class="tagline"><em>Aspiring Software Engineer &amp; Web Developer</em></p>
+
+        <!-- Internal navigation hyperlinks -->
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- SECTION 1: ABOUT ME (Paragraph + Image, text formatting tags) -->
+    <section id="about">
+        <div class="about-text">
+            <h2>About <mark>Me</mark></h2>
+            <p>
+                Hi, I’m <strong>Harsh</strong>, a <b>Computer Science student</b> who loves building
+                clean, responsive websites and solving problems with code.
+            </p>
+            <p>
+                I’m currently focused on <i>Data Structures</i>, <u>Algorithms</u>, and 
+                <em>modern web development</em>. My goal is to work at a 
+                <strong>product-based company</strong> and build real-world applications that people use every day.
+            </p>
+            <p>
+                When I’m not coding, I enjoy reading tech blogs, experimenting with new tools, 
+                and improving my <b><i>problem-solving skills</i></b>.
+            </p>
+
+            <!-- External links (GitHub, LinkedIn) -->
+            <p>
+                Connect with me:
+                <a href="https://github.com/your-github" target="_blank">GitHub</a> |
+                <a href="https://www.linkedin.com/in/your-linkedin" target="_blank">LinkedIn</a>
+            </p>
+        </div>
+
+        <div class="about-photo">
+            <!-- Replace "profile.jpg" with your own image file -->
+            <img src="profile.jpg"
+                 width="200"
+                 height="200"
+                 alt="Profile photo of Harsh"
+                 title="Harsh - Portfolio Photo">
+        </div>
+    </section>
+
+    <!-- SECTION 2: EDUCATION (Table + ordered list timeline) -->
+    <section id="education">
+        <h2>Education</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="4">Academic Qualifications</th> <!-- colspan usage -->
+                </tr>
+                <tr>
+                    <th>Degree / Class</th>
+                    <th>Institution</th>
+                    <th>Year</th>
+                    <th>Percentage / CGPA</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>B.Tech CSE</td>
+                    <td>Thapar Institute of Engineering &amp; Technology</td>
+                    <td>2023–2027</td>
+                    <td rowspan="2">CGPA: 7.5 (current)</td> <!-- rowspan usage -->
+                </tr>
+                <tr>
+                    <td>Ongoing Semesters</td>
+                    <td>Specialization in Software Development</td>
+                    <td>Current</td>
+                </tr>
+                <tr>
+                    <td>Class 12</td>
+                    <td> Senior Secondary School</td>
+                    <td>2023</td>
+                    <td>92%</td>
+                </tr>
+                <tr>
+                    <td>Class 10</td>
+                    <td>High School</td>
+                    <td>2021</td>
+                    <td>94%</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="timeline">
+            <h3>Academic Timeline (Ordered List)</h3>
+            <ol>
+                <li>2021 – Completed Class 10 with distinction.</li>
+                <li>2023 – Passed Class 12 (Science) with excellent grades.</li>
+                <li>2023 – Joined B.Tech in Computer Science.</li>
+                <li>2027 – Expected graduation as a Computer Science Engineer.</li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- SECTION 3: SKILLS (unordered list) -->
+    <section id="skills">
+        <h2>Skills</h2>
+        <p>Here are some tools and technologies I’m comfortable with:</p>
+        <ul>
+            <li>C / C++ (DSA, problem solving)</li>
+            <li>HTML, CSS, JavaScript</li>
+            <li>Responsive Web Design</li>
+            <li>Git &amp; GitHub</li>
+            <li>Basic SQL &amp; Databases</li>
+        </ul>
+    </section>
+
+    <!-- SECTION 4: PROJECTS (Text + link + optional image) -->
+    <section id="projects">
+        <h2>Projects</h2>
+
+        <div class="project">
+            <h3>Car Rental Landing Page</h3>
+            <p>
+                A responsive car rental website front-end built using 
+                <strong>HTML, CSS and JavaScript</strong>. Includes hero section,
+                car listing, booking form and interactive navigation.
+            </p>
+            <p>
+                View project:
+                <a href="https://github.com/your-github/car-rental" target="_blank">
+                    GitHub Repository
+                </a>
+            </p>
+            <!-- Optional project image -->
+            <img src="project-car-rental.png" alt="Screenshot of car rental project" title="Car Rental Project Screenshot">
+        </div>
+
+        <div class="project">
+            <h3>Online Exam Portal</h3>
+            <p>
+                Designed a mini online examination portal with timed quizzes, 
+                score calculation and question bank. Focused on clean UI and basic validation.
+            </p>
+            <p>
+                View project:
+                <a href="https://github.com/your-github/online-exam" target="_blank">
+                    Repository Link
+                </a>
+            </p>
+        </div>
+    </section>
+
+    <!-- SECTION 5: CONTACT -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>If you’d like to collaborate or just say hello, feel free to reach out:</p>
+        <div class="contact-list">
+            <p><strong>Email:</strong> <a href="mailto:harsh@example.com">yourmail@example.com</a></p>
+            <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/hasrh-linkedin" target="_blank">linkedin.com/in/your-linkedin</a></p>
+            <p><strong>GitHub:</strong> <a href="https://github.com/hasrh-github" target="_blank">github.com/your-github</a></p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        Made by <strong>[Your Name]</strong>
+    </footer>
+</body>
+</html>
